@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-size: 16px;
+    color: var(--Charcoal-Grey);
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Charcoal-Grey);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    border-radius: 20px;
+
+}
+
+.form{
+   width: 100vw;
+}
+
+.img2 img{
+    width: 100vw;
+}
+
+.stay{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: Roboto;
+    padding: 15px;
+}
+
+.join{
+    padding: 15px;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+}
+
+.img3{
+    display: none;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+}
+
+.input-error{
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid var(--Dark-Slate-Grey);
+    
+}
+
+
+#name-error{
+    display: none;
+    color: var(--Tomato);
+    margin-top: -30px;
+    margin-left: auto;
+}
+
+
+
+label{
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid var(--Grey);
+    background-color: var(--Grey);
+    border-radius: 50%;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    color: var(--Tomato);
+}
+
+
+input[type="checkbox"].checked {
+    background-color: var(--Grey);
+    content: '';
+    background-image: url(./assets/images/icon-list.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+}
+
+
+#check{
+    float: left;
+    margin-bottom: 10px;
+}
+
+.btn{
+    padding: 15px;
+
+}
+
+.btn button{
+    width: 100%;
+    padding: 15px;
+    background-color: var(--Charcoal-Grey);
+    color: var(--White);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    body{
+        height: 100vh;
+    }
+
+    #name-error{
+        margin-left: 250px;
+    }
+
+    .container{
+        justify-content: space-evenly;
+        flex-direction: row;
+        padding: 15px 0;
+    }
+
+    .form{
+       max-width: 60%;
+       width: 50%;
+    }
+
+    .img3{
+        display: flex;
+        width: 40%;
+    }
+
+    .img3 img{
+        width: 100%;
+    }
+
+    .stay{
+        font-size: 2.5rem;
+    }
+
+    .img2{
+        display: none;
+    }
+
+
+}
+
+.success{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--White);
+    padding: 25px;
+    height: 100vh;
+    position: relative;
+}
+
+.img{
+    position: absolute;
+    top: 20%;
+}
+
+.thanks{
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: absolute;
+    top: 32%;
+    color: var(--Charcoal-Grey);
+}
+
+.confirm{
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+strong{
+    color: var(--Charcoal-Grey);
+}
+
+.btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn2 button{
+    position: absolute;
+    bottom: 10%;
+    width: 90%;
+    padding: 15px;
+    background-color: var(--Charcoal-Grey);
+    color: var(--White);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    body{
+        height: 100vh;
+    }
+
+    .success{
+        width: 400px;
+        height: 400px;
+        justify-content: space-evenly;
+        border-radius: 20px;
+    }
+
+    .img{
+        top: 10%;
+      
+    }
+
+    .img img{
+        width: 50px;
+        padding: 15px;
+    }
+
+    .thanks{
+        top: 25%;
+        padding: 15px;
+        font-size: 2.5rem;
+    }
+
+    .confirm{
+        position: absolute;
+        top: 50%;
+        max-width: 100%;
+        width: 80%;
+        padding: 15px;
+    }
+}
